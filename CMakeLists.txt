@@ -6,6 +6,7 @@ project(${MODULE_NAME})
 # general setup
 include_directories(include)
 add_compile_options(-Wall -Wconversion -fPIC -O3)
+set(CMAKE_CXX_FLAGS "-flto=auto")
 
 # build libraries
 add_library(integrate src/integrate.c)
